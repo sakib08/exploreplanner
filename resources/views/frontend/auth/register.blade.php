@@ -37,7 +37,18 @@
                                 </div><!--form-group-->
                             </div><!--col-->
                         </div><!--row-->
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <div class="form-group">
+                                {{ html()->label(__('User role'))->for('user_role') }}
 
+                                {{ html()->text('user_role')
+                                    ->class('form-control')
+                                    ->placeholder(__('User role'))
+                                    ->attribute('maxlength', 191) }}
+                            </div><!--form-group-->
+                        </div><!--col-->
+                    </div><!--row-->
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
