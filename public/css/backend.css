@@ -12680,7 +12680,6 @@ html {
   height: 100%;
   border-right: solid 1px #c5d6de;
   overflow: auto;
-  z-index: 60;
   padding: 90px 0 110px;
 }
 .dark-theme .side-menu {

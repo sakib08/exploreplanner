@@ -41,11 +41,10 @@
                         <div class="col-12 col-md-12">
                             <div class="form-group">
                                 {{ html()->label(__('User role'))->for('user_role') }}
-
-                                {{ html()->text('user_role')
+                                {{ html()->select('user_role', [ 1 => 'User', 2 => 'Owner'], 2) 
                                     ->class('form-control')
                                     ->placeholder(__('User role'))
-                                    ->attribute('maxlength', 191) }}
+                                    }}
                             </div><!--form-group-->
                         </div><!--col-->
                     </div><!--row-->

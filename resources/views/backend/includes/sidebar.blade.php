@@ -7,5 +7,29 @@
                 <span class="lbl">Dashboard</span>
             </a>
         </li>
+        <li class="gold">
+            <a href="{{ route('admin.dashboard') }}">
+                <i class="font-icon font-icon-home"></i>
+                <span class="lbl">Dashboard</span>
+            </a>
+        </li>
+        <li class="btn-group dropright">
+            <i class="font-icon font-icon-home"></i>
+            <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User list
+            
+              <span class="sr-only">Toggle Dropright</span>
+            </a>
+            <div class="dropdown-menu">
+                <a href="{{ route('admin.auth.user.index') }}">
+                    <i class="fas fa-users"></i>
+                    <span class="lbl">User list</span>
+                </a>
+                <a href="{{ route('admin.auth.role.index') }}">
+                        <i class="font-icon font-icon-home"></i>
+                        <span class="lbl">User Role</span>
+                </a>
+            </div>
+        </li>
     </ul>
 </nav><!--.side-menu-->
