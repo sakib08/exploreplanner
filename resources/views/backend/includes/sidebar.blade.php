@@ -7,11 +7,22 @@
                 <span class="lbl">Dashboard</span>
             </a>
         </li>
-        <li class="gold">
-            <a href="{{ route('admin.dashboard') }}">
-                <i class="font-icon font-icon-home"></i>
-                <span class="lbl">Dashboard</span>
+        <li class="btn-group dropright">
+            <i class="font-icon font-icon-home"></i>
+            <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Restaurant
+              <span class="sr-only">Toggle Dropright</span>
             </a>
+            <div class="dropdown-menu">
+                <a href="{{ route('admin.planner.restaurant.index') }}">
+                    <i class="fas fa-users"></i>
+                    <span class="lbl">Create</span>
+                </a>
+                <a href="{{ route('admin.planner.restaurant.index') }}">
+                        <i class="font-icon font-icon-home"></i>
+                        <span class="lbl">List</span>
+                </a>
+            </div>
         </li>
         <li class="btn-group dropright">
             <i class="font-icon font-icon-home"></i>
