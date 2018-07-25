@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.28 on 2018-07-20 21:38:49.
+ * Generated for Laravel 5.6.28 on 2018-07-22 17:30:02.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -12801,6 +12801,62 @@ namespace Laravel\Socialite\Facades {
  
 }
 
+namespace Maatwebsite\Excel\Facades { 
+
+    class Excel {
+        
+        /**
+         * 
+         *
+         * @param object $export
+         * @param string|null $fileName
+         * @param string $writerType
+         * @throws \PhpOffice\PhpSpreadsheet\Exception
+         * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+         * @return \Maatwebsite\Excel\BinaryFileResponse 
+         * @static 
+         */ 
+        public static function download($export, $fileName, $writerType = null)
+        {
+            return \Maatwebsite\Excel\Excel::download($export, $fileName, $writerType);
+        }
+        
+        /**
+         * 
+         *
+         * @param object $export
+         * @param string $filePath
+         * @param string|null $disk
+         * @param string $writerType
+         * @throws \PhpOffice\PhpSpreadsheet\Exception
+         * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+         * @return bool 
+         * @static 
+         */ 
+        public static function store($export, $filePath, $disk = null, $writerType = null)
+        {
+            return \Maatwebsite\Excel\Excel::store($export, $filePath, $disk, $writerType);
+        }
+        
+        /**
+         * 
+         *
+         * @param object $export
+         * @param string $filePath
+         * @param string|null $disk
+         * @param string $writerType
+         * @return \Maatwebsite\Excel\PendingDispatch 
+         * @static 
+         */ 
+        public static function queue($export, $filePath, $disk = null, $writerType = null)
+        {
+            return \Maatwebsite\Excel\Excel::queue($export, $filePath, $disk, $writerType);
+        }
+         
+    }
+ 
+}
+
 namespace Arcanedev\NoCaptcha\Facades { 
 
     class NoCaptcha {
@@ -14915,62 +14971,6 @@ namespace Spatie\Html\Facades {
         public static function hasMacro($name)
         {
             return \Spatie\Html\Html::hasMacro($name);
-        }
-         
-    }
- 
-}
-
-namespace Maatwebsite\Excel\Facades { 
-
-    class Excel {
-        
-        /**
-         * 
-         *
-         * @param object $export
-         * @param string|null $fileName
-         * @param string $writerType
-         * @throws \PhpOffice\PhpSpreadsheet\Exception
-         * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
-         * @return \Maatwebsite\Excel\BinaryFileResponse 
-         * @static 
-         */ 
-        public static function download($export, $fileName, $writerType = null)
-        {
-            return \Maatwebsite\Excel\Excel::download($export, $fileName, $writerType);
-        }
-        
-        /**
-         * 
-         *
-         * @param object $export
-         * @param string $filePath
-         * @param string|null $disk
-         * @param string $writerType
-         * @throws \PhpOffice\PhpSpreadsheet\Exception
-         * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
-         * @return bool 
-         * @static 
-         */ 
-        public static function store($export, $filePath, $disk = null, $writerType = null)
-        {
-            return \Maatwebsite\Excel\Excel::store($export, $filePath, $disk, $writerType);
-        }
-        
-        /**
-         * 
-         *
-         * @param object $export
-         * @param string $filePath
-         * @param string|null $disk
-         * @param string $writerType
-         * @return \Maatwebsite\Excel\PendingDispatch 
-         * @static 
-         */ 
-        public static function queue($export, $filePath, $disk = null, $writerType = null)
-        {
-            return \Maatwebsite\Excel\Excel::queue($export, $filePath, $disk, $writerType);
         }
          
     }
@@ -17592,6 +17592,8 @@ namespace  {
 
     class Socialite extends \Laravel\Socialite\Facades\Socialite {}
 
+    class Excel extends \Maatwebsite\Excel\Facades\Excel {}
+
     class Captcha extends \Arcanedev\NoCaptcha\Facades\NoCaptcha {}
 
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
@@ -17601,8 +17603,6 @@ namespace  {
     class Form extends \Collective\Html\FormFacade {}
 
     class Html extends \Spatie\Html\Facades\Html {}
-
-    class Excel extends \Maatwebsite\Excel\Facades\Excel {}
 
     class Uuid extends \Webpatser\Uuid\Uuid {}
 
